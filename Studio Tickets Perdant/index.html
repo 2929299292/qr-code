@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu as perdu...</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: url('IMG_5716.JPG') no-repeat center center fixed;
+            background-size: cover;
+            padding: 50px;
+            overflow: hidden;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.8);
+            max-width: 500px;
+            margin: auto;
+            position: relative;
+            animation: fadeIn 1.5s ease-in-out;
+            color: white;
+        }
+        h1 {
+            color: #ff4757;
+            animation: bounce 1s infinite;
+        }
+        p {
+            font-size: 18px;
+            color: white;
+            opacity: 0;
+            animation: fadeInText 2s forwards 1s;
+        }
+        .rules {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #ddd;
+            opacity: 0;
+            animation: fadeInText 2s forwards 1.5s;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background: #28a745;
+            text-decoration: none;
+            border-radius: 5px;
+            opacity: 0;
+            animation: fadeInText 2s forwards 2s;
+        }
+        .btn:hover {
+            background: #218838;
+        }
+        .qr-text {
+            font-size: 16px;
+            color: #f1f1f1;
+            margin-top: 15px;
+            opacity: 0;
+            animation: fadeInText 2s forwards 2.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInText {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>❌ Dommage !</h1>
+        <p>Ce QR Code n'est pas un ticket gagnant.</p>
+        <p class="rules">🎟 Règles du jeu :<br>
+           - 1 QR Code gagnant est caché parmi X tickets.<br>
+           - 🎤 Le gagnant remportera **1 heure de studio offerte !**<br>
+           - Continue de scanner, peut-être que la prochaine fois sera la bonne !</p>
+        <p class="qr-text">🔥 Un seul scan peut t'emmener en studio... Essaie encore ! 🎤</p>
+        <a href="https://www.instagram.com/29makesthis" class="btn">Suis-nous sur Instagram</a>
+    </div>
+</body>
+</html>
